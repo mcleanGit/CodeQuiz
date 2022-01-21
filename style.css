@@ -1,92 +1,114 @@
 /* css for CodeQuiz */
-*, *::before, *::after {
- box-sizing: border-box;
- font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
 :root {
- --hue-neutral: 200;
- --hue-wrong: 0;
- --hue-correct: 145;
+  --primary-color: black;
+  --secondary-color: blue;
+  --tertiary-color: green;
 }
 
-body {
---hue: var(--hue-neutral);
- padding: 0;
+* {
+ box-sizing: border-box;
  margin: 0;
- display: flex;
- justify-content: center;
- align-items: centre;
- width: 100vw;
- height: 100vh;
- background-color: hsl(var(--hue), 100%, 20%);
+ padding: 0;
 }
 
-body.correct {
- --hue: var(--hue-correct);
+/* gives the attributes of the body of text throughout, to check h & w values */
+body {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  color: var(--primary-color);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  height: 100vh;
+  width: 100vw;
 }
 
-body.wrong {
- --hue: var(--hue-wrong);
+header {
+  margin-top: 23px;
+  display: flex;
+  flex-direction: row;
 }
 
-.container {
- width: 800px;
- max-width: 80%;
- background-color: white;
- border-radius: 5px;
- padding: 10px;
- box-shadow: 0 0 10px 2px;
+.high-scores a {
+  color: var(--tertiary-color);
+  position: absolute;
+  text-decoration: none;
+  padding-left: 23px;
+  font-size: 23px;
 }
 
-.btn-grid {
- display: grid;
-/*grid-template-columns: repeat (2, auto);  */
- gap: 10px;
- margin: 20px 0;
+.timer {
+  color: var(--tertiary-color);
+  position: absolute;
+  right: 69px;
+  width: 100px;
+  text-align: left;
+  font-size: 23px;
+  padding-left: 46px;
 }
 
-.btn {
- --hue: var(--hue-neutral);
- background-color: hsl(var(--hue), 100%, 50%);
- border: 1px, solid, hsl(var(--hue), 100%, 30%);
- border-radius: 5px;
- padding: 5px, 10px;
- color: white;
- outline: none;
+.timer-text {
+  color: var(--tertiary-color);
+  position: absolute;
+  margin-top: 23px;
+  top: 0;
+  right: 0;
+  width: 100px;
+  text-align: center;
+  padding-left: 15px;
+  font-size: 46px;
 }
 
-.btn:hover {
-  border-color: black;
+.intro {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.btn-correct {
- --hue: var(--hue-correct);
- color: black;
+.intro h1 {
+  width: 100%;
+  padding-top: 46px;
+  display: flex;
+  justify-content: center;
+  font-size: 46px;
 }
 
-.btn-wrong {
- --hue: var(--hue-wrong);
+.intro p {
+  width: 100%;
+  padding-top: 23px;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  padding-left: 184px;
+  padding-right: 184px;
+  font-size: 23px;
 }
 
-/* note: next-btn to be automated in Code Quiz */
-.start-btn, .next-btn {
- font-size: 1.5rem;
- font-weight: bold;
- padding: 10px 20px;
+.start-btn {
+  margin: auto;
+  margin-top: 28px;
+  outline: none;
+  border: none;
+  display: inline-block;
+  padding: 12px 18px;
+  background-color: var(--secondary-color);
+  color: white;
+  font-size: 23px;
+  border-radius: 12px;
+  position: relative;
+  top: -3px;
+  box-shadow: 0 3px var(--grey);
+  cursor: pointer;
 }
 
-.controls {
- display: flex;
- justify-content: centre;
- align-items: center;
+.start-btn:hover {
+  box-shadow: 0 4px var(--grey);
+  top: -3px;
+  background-color: var(--tertiary-color);
 }
 
-.hide {
- display: none;
+.start-btn:active {
+  box-shadow: 0 4px var(--grey);
+  top: 0;
+  background-color: var(--tertiary-color);
 }
 
-
-
-
-
+/* css so far... /

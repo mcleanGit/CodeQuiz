@@ -5,32 +5,63 @@
  <meta http-equiv="X-UA-Compatible" content="IE=edge">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>Code Quiz</title>
- <link href ="style.css" ref = "stylesheet">
- <script defer src="script.js"></script>
-
+ <link rel = "stylesheet" href="style.css">
+ <script src="script.js"></script>
 </head>
 
 <body>
- <div class = "container">
-  <div id="question-container" class="hide">
-       <div class="controls">
-  </div>
-   <div id="question">Question</div>
-   <div id="answer-buttons" class="btn-grid">
-     <button class="btn">"Answer1"</button>
-     <button class="btn">"Answer2"</button>
-     <button class="btn">"Answer3"</button>
-     <button class="btn">"Answer4"</button>
-     <button class="btn">"Answer5"</button>
-   </div>
-   <div class= "controls">
-    <button class="btn-correct">"Answer1"</button>
-    <button class="btn-wrong">"Answer2"</button>
-   </div>
-    
+  <header> 
+    <p class="high-scores">
+        <!--css placeholder, this end-quiz 'anchor' not executed, to local storage-->
+          <a href="#high-scores">View high scores</a>
+    </p>   
+    <!--Timer --> 
+    <div>
+      <p class="timer">Time:   
+      </p>
+      <p class="timer-text" id="countdown:"></p>
+    </div>
+  </header>
+<!--intro-page-->
+  <section
+    id="intro-page" class="intro">
+      <h1>Coding Quiz Challenge</h1>
+      <p>
+        Try to answer the following code-related questions within the time limit. 
+        Keep in mind that incorrect answers will penalize your score/time by five seconds!
+      </p>
+      <button id="start-quiz" class="start-btn" type="submit">Start Quiz</button>
+  </section> 
+
+<!--quiz-pages-->
+<!--these are handled via Javascript arrays-->
+  <div 
+    id="answer-button" class="quiz-page">
   </div>
 
+<!--result-page-->
+<!--todo: all done alert, final score, initials box, submit button-->
+  <div 
+    id="results" class="result-page">
+    <p>All done!</p>
+    <p>Your final score is xx.</p>
+    <p>Enter initials: </p>
+    <button id="submit">Submit</button>
+  </div>
 
- </div>
+<!--high-score page-->
+<!--this not done, requires use of local-storage ?-->
+  <div
+    id="score" class="score-page">
+    <p>High scores</p>
+<!--need textbox that enters rank, initials, score: "1. AB initials - 22"-->
+<!--need two buttons: go back should restart the quiz ? clear clears local storage-->
+    <button id="">Go back</button>
+    <button id="clear">Clear high scores</button>
+  </div>
+
+<!--Javascript Quiz Code-->
+<script src="script.js"></script
+
 </body>
 </html>
