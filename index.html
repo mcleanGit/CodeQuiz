@@ -6,7 +6,6 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>Code Quiz</title>
  <link rel = "stylesheet" href="style.css">
- <script src="script.js"></script>
 </head>
 
 <body>
@@ -17,21 +16,21 @@
     </p>   
     <!--Timer --> 
     <div>
-      <p class="timer">Time:   
+      <p class="timer">
+        Time:   
       </p>
-      <p class="timer-text" id="countdown:"></p>
+      <p class="timer-text" id="countdown"></p>
     </div>
   </header>
 <!--intro-page-->
-  <section
-    id="intro-page" class="intro">
-      <h1>Coding Quiz Challenge</h1>
-      <p>
-        Try to answer the following code-related questions within the time limit. 
-        Keep in mind that incorrect answers will penalize your score/time by five seconds!
-      </p>
-      <button id="start-quiz" class="start-btn" type="submit">Start Quiz</button>
-  </section> 
+  <div id="intro" class="intro-page">
+    <h1>Coding Quiz Challenge</h1>
+    <p>
+      Try to answer the following code-related questions within the time limit. 
+      Keep in mind that incorrect answers will penalize your score/time by five seconds!
+    </p>
+    <button id="start-quiz" class="start-btn" type="submit">Start Quiz</button>
+  </div>
 
 <!--quiz-pages-->
 <!--these are handled via Javascript arrays-->
@@ -40,7 +39,7 @@
   </div>
 
 <!--result-page-->
-<!--todo: all done alert, final score, initials box, submit button-->
+<!--todo: css, all done alert, final score, initials box, submit button-->
   <div 
     id="results" class="result-page">
     <p>All done!</p>
@@ -60,8 +59,8 @@
     <button id="clear">Clear high scores</button>
   </div>
 
-<!--Javascript Quiz Code-->
-<script src="script.js"></script
+   <!-- quiz code -->
+   <script src="script.js"></script>
 
 </body>
 </html>

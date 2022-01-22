@@ -3,6 +3,8 @@
   --primary-color: black;
   --secondary-color: blue;
   --tertiary-color: green;
+  --white: white;
+  --grey: #333; 
 }
 
 * {
@@ -18,8 +20,6 @@ body {
   background-color: white;
   color: var(--primary-color);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  height: 100vh;
-  width: 100vw;
 }
 
 header {
@@ -28,22 +28,27 @@ header {
   flex-direction: row;
 }
 
-.high-scores a {
+header a {
   color: var(--tertiary-color);
-  position: absolute;
+  text-decoration: none;
+  font-size: 23px;
+}
+
+.high-scores {
+  color: var(--secondary-color);
   text-decoration: none;
   padding-left: 23px;
-  font-size: 23px;
 }
 
 .timer {
   color: var(--tertiary-color);
   position: absolute;
-  right: 69px;
-  width: 100px;
+  margin-top: 23px;
   text-align: left;
+  top: 0;
+  right: 0;
+  width: 100px;
   font-size: 23px;
-  padding-left: 46px;
 }
 
 .timer-text {
@@ -54,16 +59,26 @@ header {
   right: 0;
   width: 100px;
   text-align: center;
-  padding-left: 15px;
-  font-size: 46px;
+  padding-left: 23px;
+  font-size: 23px;
 }
 
-.intro {
+.countdown {
+  margin-top: 23px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  text-align: left;
+  font-size: 23px;
+}
+
+.intro-page {
   display: flex;
   flex-wrap: wrap;
 }
 
-.intro h1 {
+.intro-page h1 {
   width: 100%;
   padding-top: 46px;
   display: flex;
@@ -71,7 +86,7 @@ header {
   font-size: 46px;
 }
 
-.intro p {
+.intro-page p {
   width: 100%;
   padding-top: 23px;
   display: flex;
@@ -111,4 +126,46 @@ header {
   background-color: var(--tertiary-color);
 }
 
-/* css so far... /
+.quiz-page {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-top: 100px;
+  text-align: left;
+  padding-left: 230px;
+  padding-right: 230px;
+}
+
+.quiz-page button {
+  margin:auto;
+  margin-top: 12px;
+  margin-right: 230px;
+  outline: none;
+  border: none;
+  display: inline-block;
+  padding: 10px 0 10px 23px;
+  width: 200px;
+  text-align: left;
+  background-color: var(--secondary-color);
+  color: white;
+  font-size: 23px;
+  border-radius: 12px;
+  position: relative;
+  top: -4px;
+  box-shadow: 0 3px var(--grey);
+  cursor: pointer;
+}
+
+.quiz-page button:hover {
+  box-shadow: 0 2px var(--grey);
+  top: -3px;
+  background-color: var(--tertiary-color);
+}
+.quiz-page button:active {
+  box-shadow: 0 0px var(--grey);
+  top: 0;
+  background-color: var(--tertiary-color);
+}
+
+/* to continue css at .result-page ... */
+
