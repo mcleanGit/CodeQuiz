@@ -1,9 +1,9 @@
 /* script.js for Code Quiz - under development, adjust to mockup and task */
 // find, identify elements, set initial values; discussion with study-group+; vars unused issues
 var startEl = document.querySelector("#start-quiz");
-var timerEl = document.getElementById("#countdown");
+var timerEl = document.getElementById("countdown");
 var quizPage = document.querySelector(".quiz-page");
-var answerEl = document.getElementById("#answer-button");
+var answerEl = document.getElementById("answer-button");
 var questionIndex = 0;
 var timeLeft = 75;
 var resultsPage = document.querySelector(".result-page");
@@ -12,11 +12,11 @@ var resultsPage = document.querySelector(".result-page");
 //event Listener to start time
 document.querySelector("#start-quiz").addEventListener("click", function() {
 // clears / hides intro page section to start quiz, to review and confirm
-  var element = document.getElementById("#intro");
+  var element = document.getElementById("intro");
   element.parentNode.removeChild(element);
   // call timer function, call questions array sequence
   countdown();
-  getQuestion ();
+  getQuestion();
 });
 
 // countdown function from 75 seconds, not working: why the problem? placement in js?
@@ -89,7 +89,7 @@ var questions = [
         ]
     }
  ];
- 
+ console.log(array)
 // creates question elements inside Javascript
 function getQuestion() {
   var div = document.createElement("div");

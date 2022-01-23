@@ -46,7 +46,7 @@ header a {
   margin-top: 23px;
   text-align: left;
   top: 0;
-  right: 0;
+  right: 92px;
   width: 100px;
   font-size: 23px;
 }
@@ -54,13 +54,12 @@ header a {
 .timer-text {
   color: var(--tertiary-color);
   position: absolute;
-  margin-top: 23px;
   top: 0;
-  right: 0;
-  width: 100px;
+  right: 46px;
+  width: 69px;
   text-align: center;
   padding-left: 23px;
-  font-size: 23px;
+  font-size: 20px;
 }
 
 .countdown {
@@ -68,9 +67,8 @@ header a {
   position: absolute;
   top: 0;
   right: 0;
-  width: 100%;
+  width: 100px;
   text-align: left;
-  font-size: 23px;
 }
 
 .intro-page {
@@ -161,11 +159,80 @@ header a {
   top: -3px;
   background-color: var(--tertiary-color);
 }
+
 .quiz-page button:active {
   box-shadow: 0 0px var(--grey);
   top: 0;
   background-color: var(--tertiary-color);
 }
 
-/* to continue css at .result-page ... */
+.result-page {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-top: 46px;
+  text-align: center;
+  padding-left: 253px;
+  padding-right: 253px;
+  font-size: 46px;
+}
 
+.result-page p {
+  padding-top: 12px;
+  font-size: 23px;
+}
+
+.result-page button {
+  margin: auto;
+  outline: none;
+  border: none;
+  display: inline-block;
+  padding: 8px 15px;
+  margin-left: 12px;
+  background-color: var(--secondary-color);
+  color: white;
+  font-size: 14px;
+  border-radius: 12px;
+  position: relative;
+  top: -3px;
+  box-shadow: 0 3px var(--grey);
+  cursor: pointer;
+}
+
+.result-page button:hover {
+  box-shadow: 0 2px var(--grey);
+  top: -2px;
+  background-color: var(--tertiary-color);
+}
+
+.result-page button:active {
+  box-shadow: 0 0 px var(--grey);
+  top: 0;
+  background-color: var(--tertiary-color);
+}
+
+.result-page input {
+  padding: 5px 5px;
+}
+
+@media screen and (max-width: 980px) {
+
+  .section h1 {
+    padding-left: 46px;
+    padding-right: 299px;
+  }
+  .section p {
+    padding-left: 46px;
+    padding-right: 299px;
+  }
+
+  .quiz-page {
+    padding-right: 414px;
+  }
+
+  .result-page {
+    padding-left: 46px;
+    padding-right: 299px;
+  }
+
+}
