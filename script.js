@@ -8,7 +8,6 @@ var questionIndex = 0;
 var timeLeft = 75;
 var resultsPage = document.querySelector(".result-page");
 
-// had placed questions.js in here, now separate file
 //event Listener to start time
 document.querySelector("#start-quiz").addEventListener("click", function() {
 // clears / hides intro page section to start quiz, to review and confirm
@@ -37,7 +36,7 @@ function countdown() {
 }
 
 /* question.js possible as separate js file but here embedded in single js */
-var questions = [
+const questions = [
   {
     question: "1. Commonly used data types do not include:",
     answer: "3. alerts",
@@ -89,17 +88,16 @@ var questions = [
         ]
     }
  ];
- console.log(array)
 // creates question elements inside Javascript
 function getQuestion() {
   var div = document.createElement("div");
   var h1 = document.createElement("h1");
-  var buttonOne = document.createElement("answer-button");
-  var buttonTwo = document.createElement("answer-button");
-  var buttonThree = document.createElement("answer-button");
-  var buttonFour = document.createElement ("answer-button");
+  var buttonOne = document.createElement("button");
+  var buttonTwo = document.createElement("button");
+  var buttonThree = document.createElement("button");
+  var buttonFour = document.createElement ("button");
 
-// reads content of questions from above array
+// reads content of questions from above array, 4 options answer choices
 h1.textContent = questions[questionIndex].question;
 buttonOne.textContent = questions[questionIndex].options[0];
 buttonTwo.textContent = questions[questionIndex].options[1];
@@ -113,11 +111,11 @@ buttonThree.addEventListener("click", checkAnswer);
 buttonFour.addEventListener("click", checkAnswer);
 
 // put content on page, to review this...
-div.appendChild("h1");
-div.appendChild("buttonOne");
-div.appendChild("buttonTwo");
-div.appendChild("buttonThree");
-div.appendChild("buttonFour");
+div.appendChild(h1);
+div.appendChild(buttonOne);
+div.appendChild(buttonTwo);
+div.appendChild(buttonThree);
+div.appendChild(buttonFour);
 quizPage.innerHTML = "";
 quizPage.appendChild(div);
 }
@@ -143,26 +141,26 @@ function checkAnswer(event) {
 function finalScore () {
   var div = document.createElement("div");
   var h1 = document.createElement("h1");
-  var p = document.createElement("p");
-  var p2 = document.createElement("p");
+  var p1 = document.createElement("p1");
+  var p2 = document.createElement("p2");
   var input = document.createElement("input");
   var button = document.createElement("button");
 
 // add content
 h1.textContent = "Done!";
-p.textContent = "Your final score is " + timerEl.textContent;
+p1.textContent = "Your final score is " + timerEl.textContent;
 p2.textContent = "Enter initials: ";
 input.textContent = "";
 button.textContent = "Submit";
 
 // put content on page
-div.appendChild("h1");
-div.appendChild("p");
-div.appendChild("p2");
+div.appendChild(h1);
+div.appendChild(p1);
+div.appendChild(p2);
 div.appendChild(input);
 div.appendChild(button);
 quizPage.innerHTML = "";
-resultsPage.appendChild("div");
+resultsPage.appendChild(div);
 }
 
 /* final additional page with High scores function incomplete ?
