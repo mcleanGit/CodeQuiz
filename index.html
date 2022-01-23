@@ -34,36 +34,44 @@
 
 <!--quiz-pages-->
 <!--these are handled via Javascript arrays-->
-  <section
+  <div
     id="answer-button" class="quiz-page">
-  </section>
-
-<!--result-page:  this can all be done in JS-->
-<!--todo: css, all done alert, final score, initials box, submit button
+  </div>
+   
+<!--result-page:  HTML for now to check layout, this all to be done in JS-->
+<!--todo: css, all done alert, final score, initials box, submit button-->
   <div 
     id="results" class="result-page">
-    <p>All done!</p> 
-    <p>Your final score is  .</p>  
-    <p>Enter initials:      </p>  
-    <button id="submit">Submit</button>
+    <p1>All done!</p1> 
+    <br>
+    <p2>Your final score is    .  
+    <br>
+      <label for="initials">Enter initials:    </label>
+      <input type="text" id="initials">
+      <button type="submit">Submit</button>
+    </p2> 
   </div>
--->
-<!--high-score page-->
+<!--high-score page: HTML for now to check layout, this all to be done in JS-->
 <!--requires use of local-storage ?-->
-<!--to be done in JS
+<!--to be done in JS-->
   <div
     id="score" class="score-page">
-    <p>High scores</p>
--->
+    <p1>High scores</p1>
+    <br>
 <!--need textbox that enters rank, initials, score: "1. AB initials - 22"-->
 <!--need two buttons: go back should restart the quiz ? clear clears local storage-->
-<!--also to be done in JS
-    <button id="">Go back</button>
-    <button id="clear">Clear high scores</button>
+<!--also to be done in JS-->
+    <p2>
+      <label for="high-score"></label>
+      <input type="text" id="high-score">
+    <br>
+      <button type="submit">Go back</button>
+      <button type="reset">Clear high scores</button>
+    </p2>
   </div>
--->
    <!-- quiz code -->
    <script src="script.js"></script>
+   <!--to consider separate questions.js script, currently incorporated in the one-->
 
 </body>
 </html>

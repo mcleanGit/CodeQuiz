@@ -22,6 +22,7 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+/* styles header including view high scores, timer, and timer-text count-down */
 header {
   margin-top: 23px;
   display: flex;
@@ -46,7 +47,7 @@ header a {
   margin-top: 23px;
   text-align: left;
   top: 0;
-  right: 92px;
+  right: 115px;
   width: 100px;
   font-size: 23px;
 }
@@ -54,9 +55,9 @@ header a {
 .timer-text {
   color: var(--tertiary-color);
   position: absolute;
-  top: 0;
-  right: 46px;
-  width: 69px;
+  top: 23px;
+  right: 56px;
+  width: 92px;
   text-align: center;
   padding-left: 23px;
   font-size: 20px;
@@ -71,6 +72,7 @@ header a {
   text-align: left;
 }
 
+/* styles intro-page of quiz including h1 p and start-btn */
 .intro-page {
   display: flex;
   flex-wrap: wrap;
@@ -124,6 +126,7 @@ header a {
   background-color: var(--tertiary-color);
 }
 
+/* styles quiz-pages that present question array through JS h1, p, btns */
 .quiz-page {
   display: flex;
   flex-wrap: wrap;
@@ -166,20 +169,33 @@ header a {
   background-color: var(--tertiary-color);
 }
 
+/* holder styling result-page in HTML for now, to be done via JS */
 .result-page {
   display: flex;
   flex-wrap: wrap;
+  display: inline-block;
   width: 100%;
-  padding-top: 46px;
-  text-align: center;
+  top: 0;
+  text-align: left;
   padding-left: 253px;
   padding-right: 253px;
-  font-size: 46px;
 }
 
-.result-page p {
-  padding-top: 12px;
+.result-page p1 {
+  font-size: 46px;
+  font-style: bold;
+}
+
+.result-page p2 {
+  padding-top: 18px;
+  padding-bottom: 18px;
   font-size: 23px;
+}
+
+.result-page input {
+  font-size: 16px;
+  padding: 5px;
+  width: 69%;
 }
 
 .result-page button {
@@ -211,11 +227,65 @@ header a {
   background-color: var(--tertiary-color);
 }
 
-.result-page input {
+/* styles high-scores page for now, to be done via JS and requires local storage ?! */
+.score-page {
+  display: flex;
+  flex-wrap: wrap;
+  display: inline-block;
+  width: 100%;
+  top: 0;
+  text-align: left;
+  padding-left: 253px;
+  padding-right: 253px;
+}
+
+.score-page p1 {
+  font-size: 46px;
+  font-style: bold;
+  padding-bottom: 15px;
+}
+
+.score-page input {
+  font-size: 16px;
+  padding: 5px;
+  width: 80%;
+}
+
+.score-page button {
+  margin-top: 12px;
+  outline: none;
+  border: none;
+  display: inline-block;
+  padding: 5px;
+  margin-left: 12px;
+  background-color: var(--secondary-color);
+  color: white;
+  font-size: 14px;
+  border-radius: 12px;
+  position: relative;
+  top: -3px;
+  box-shadow: 0 3px var(--grey);
+  cursor: pointer;
+}
+
+.score-page button:hover {
+  box-shadow: 0 2px var(--grey);
+  top: -2px;
+  background-color: var(--tertiary-color);
+}
+
+.score-page button:active {
+  box-shadow: 0 0 px var(--grey);
+  top: 0;
+  background-color: var(--tertiary-color);
+}
+
+.score-page input {
   padding: 5px 5px;
 }
 
-@media screen and (max-width: 980px) {
+/* to review these values, add values for smaller screens 768px 576px */
+@media screen and (max-width: 992px) {
 
   .section h1 {
     padding-left: 46px;
@@ -234,5 +304,5 @@ header a {
     padding-left: 46px;
     padding-right: 299px;
   }
-
+  
 }
