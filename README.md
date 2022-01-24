@@ -21,7 +21,7 @@ The TimeLeft on the clock becomes the score
 Subsequent development would save the result to localStorage
 And call an external file that would hold high-score rankings
 
-Note: an additional html file -index+.html is provided that shows -without complete css- the div elements of results and high score that follow the  JS-drive quiz pages. These are also set up to be created and appended as JS objects. --Some of this still incomple--
+Note: an additional html file -index+.html is provided that shows -without complete css- the div elements of results and high score that follow the  JS-drive quiz pages. These are also set up to be created and appended as JS objects. --Some of this still incomplete-- The file questions.js was an earlier experiment to use a second js file for the questions array. They were subsequently folded into the main js script.
 
 
 ### Review 

@@ -133,7 +133,8 @@ function checkAnswer(event) {
   questionIndex++;
   if (questionIndex < questions.length) {
     getQuestion ();
-  } else {   
+  } else {
+    clearInterval(TimeInterval);
     finalScore();
   }
 }
