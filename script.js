@@ -110,7 +110,7 @@ buttonTwo.addEventListener("click", checkAnswer);
 buttonThree.addEventListener("click", checkAnswer);
 buttonFour.addEventListener("click", checkAnswer);
 
-// put content on page, to review this...
+// put content on page, to review this... innerHTML & appendChild -- needed !
 div.appendChild(h1);
 div.appendChild(buttonOne);
 div.appendChild(buttonTwo);
@@ -118,7 +118,8 @@ div.appendChild(buttonThree);
 div.appendChild(buttonFour);
 quizPage.innerHTML = "";
 quizPage.appendChild(div);
-}
+
+} 
 
 //check answers click-events for correct or incorrect
 function checkAnswer(event) {
@@ -127,13 +128,12 @@ function checkAnswer(event) {
     alert("Correct!")
   } else {
     alert("Incorrect!")
-    timeLeft -= 5; 
+    timeLeft -= 10; 
   }
   questionIndex++;
   if (questionIndex < questions.length) {
     getQuestion ();
-  } else {
-    clearInterval(timeInterval);
+  } else {   
     finalScore();
   }
 }
@@ -145,6 +145,7 @@ function finalScore () {
   var p2 = document.createElement("p2");
   var input = document.createElement("input");
   var button = document.createElement("button");
+  localStorage.setItem(timerEl.textContent);
 
 // add content
 h1.textContent = "Done!";
@@ -159,10 +160,32 @@ div.appendChild(p1);
 div.appendChild(p2);
 div.appendChild(input);
 div.appendChild(button);
-quizPage.innerHTML = "";
-resultsPage.appendChild(div);
+checkAnswer.innerHTML = "";
+checkAnswer.appendChild(div);
 }
 
 /* final additional page with High scores function incomplete ?
 also clear high scores and go back reset/restart buttons */
+function highscore() {
+  var div = document.createElement("div");
+  var h1 = document.createElement("h1");
+  var input = document.createElement("input");
+  var button = document.createElement("button"); 
+  var button = document.createElement("button");
+
+  // add content
+  h1.textContent = "High scores";
+  input.textContent = localStorage.getItem("score")
+  p2.textContent = "Enter initials: ";
+  input.textContent = "";
+  button.textContent = "Go back";
+  button.textContent = "Clear high scores";
+
+  // put content on page
+  div.appendChild(h1);
+  div.appendChild(input);
+  div.appendChild(button);
+  div.appendChild(button);
+  div.appendChild(div);
+}
 

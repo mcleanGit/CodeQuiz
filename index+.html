@@ -7,7 +7,8 @@
  <title>Code Quiz</title>
  <link rel = "stylesheet" href="style.css">
 </head>
-
+<!--This file index+.html shows the results and high score info as HTML vs JS
+Some css is remains incomplete, since the focus was on the JS-driven app-->
 <body>
   <header> 
     <p class="high-scores">
@@ -36,11 +37,8 @@
 <!--these are handled via Javascript arrays-->
   <div
     id="button" class="quiz-page">
-  </div>
-   
-<!--result-page:  HTML for now to check layout, this all to be done in JS-->
-<!--todo: css, all done alert, final score, initials box, submit button-->
-<!--
+  </div> 
+<!--this version shows final score info in HTML rather than through JS-->
   <div 
     id="results" class="result-page">
     <p1>All done!</p1> 
@@ -52,20 +50,11 @@
       <button type="submit">Submit</button>
     </p2> 
   </div>
--->
-<!--high-score page: HTML for now to check layout, this all to be done in JS-->
-<!--requires use of local-storage ?-->
-<!--to be done in JS-->
-<!--
+<!--this version shows high scores info in HTML rather than through JS-->
   <div
     id="score" class="score-page">
     <p1>High scores</p1>
-    <br>
--->
-<!--need textbox that enters rank, initials, score: "1. AB initials - 22" -->
-<!--need two buttons: go back should restart the quiz ? clear clears local storage-->
-<!--also to be done in JS-->
-<!--
+    <br> 
     <p2>
       <label for="high-score"></label>
       <input type="text" id="high-score">
@@ -74,10 +63,9 @@
       <button type="reset">Clear high scores</button>
     </p2>
   </div>
--->
+
    <!-- quiz code -->
    <script src="script.js"></script>
-   <!--to consider separate questions.js script, currently incorporated in the one-->
 
 </body>
 </html>
